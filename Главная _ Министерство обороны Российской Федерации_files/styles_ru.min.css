@@ -1,0 +1,3081 @@
+#jquery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 21190;
+    width: 100%;
+    height: 100%
+}
+
+#jquery-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 21200;
+    text-align: center;
+    line-height: 0
+}
+
+#jquery-lightbox a img {
+    border: none
+}
+
+#lightbox-container-image-box {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto
+}
+
+#lightbox-container-image {
+    padding: 10px
+}
+
+#lightbox-loading {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0
+}
+
+#lightbox-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10
+}
+
+#lightbox-container-image-box > #lightbox-nav {
+    left: 0
+}
+
+#lightbox-nav a {
+    outline: none
+}
+
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+    width: 49%;
+    height: 100%;
+    display: block
+}
+
+#lightbox-nav-btnPrev {
+    left: 0;
+    float: left
+}
+
+#lightbox-nav-btnNext {
+    right: 0;
+    float: right
+}
+
+#lightbox-container-image-data-box {
+    font: 10px Verdana, Helvetica, sans-serif;
+    background-color: #fff;
+    margin: 0 auto;
+    line-height: 1.4em;
+    overflow: auto;
+    width: 100%
+}
+
+#lightbox-container-image-data {
+    padding: 0 10px;
+    color: #666
+}
+
+#lightbox-container-image-data #lightbox-image-details {
+    width: 70%;
+    float: left;
+    text-align: left
+}
+
+#lightbox-image-details-caption {
+    font-weight: 700
+}
+
+#lightbox-image-details-currentNumber {
+    display: block;
+    clear: left;
+    padding-bottom: 1em
+}
+
+#lightbox-secNav-btnClose {
+    width: 66px;
+    float: right;
+    padding-bottom: .7em
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%
+}
+
+BODY {
+    font: 80% arial, sans-serif;
+    line-height: 130%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #e3e3e3 url(../../images/military/bg.gif?v=2) repeat-x top
+}
+
+div.langblock {
+    background: url(../../images/military/bglang.gif) repeat-x;
+    display: inline;
+    float: right;
+    height: 22px;
+    padding: 0 0 0 14px !important;
+    margin-left: 10px;
+    cursor: pointer
+}
+
+#langmenu {
+    background: #494949
+}
+
+div.verblock {
+    background: url(../../images/military/bglang.gif) repeat-x;
+    display: inline;
+    float: right;
+    height: 22px;
+    padding: 0 !important;
+    margin-left: 10px;
+    cursor: pointer
+}
+
+#vermenu {
+    background: #494949
+}
+
+#arealogo {
+    margin-top: 8px;
+    height: 100px
+}
+
+#logo {
+    height: 99px;
+    width: 170px;
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: contain;
+    display: inline;
+    float: left
+}
+
+#titlebig {
+    height: 59px;
+    width: 800px;
+    display: inline;
+    float: left;
+    margin-top: 13px;
+    padding-top: 10px
+}
+
+#titlebig a {
+    font-family: Georgia, Arial;
+    font-size: 28px;
+    font-weight: 700;
+    color: #555;
+    line-height: 33px;
+    text-decoration: none
+}
+
+#title {
+    height: 64px;
+    width: 240px;
+    display: inline;
+    float: left;
+    margin-top: 10px;
+    padding-top: 11px
+}
+
+#title a {
+    font-family: Georgia, Arial;
+    font-size: 17px;
+    font-weight: 700;
+    color: #555;
+    line-height: 20px;
+    text-decoration: none
+}
+
+div.myMenuContainer {
+    background: #424242 url(../../images/military/bgmenu.gif) repeat-x;
+    height: 40px;
+    margin-top: 10px
+}
+
+div.myMenu {
+    display: inline-block
+}
+
+div.myMenu a {
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-family: Georgia, Arial;
+    display: inline;
+    float: left;
+    font-weight: 700;
+    padding: 10px 8px;
+    font-size: 11px;
+    line-height: 20px;
+    text-decoration: none
+}
+
+div.myMenu a:hover {
+    text-decoration: underline
+}
+
+#curpage {
+    margin-top: 7px
+}
+
+div.searchfield {
+    width: 90px !important
+}
+
+input.searchfield {
+    width: 48px !important
+}
+
+div.shorttitle {
+    font-size: 16px;
+    font-family: Georgia, Arial;
+    padding-top: 4px;
+    font-weight: 700;
+    color: #555
+}
+
+#titlebig div.shorttitle {
+    font-size: 20px !important
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%
+}
+
+div.area0 {
+    min-height: 100%;
+    position: relative
+}
+
+* html div.area0 {
+    height: 100%;
+    width: 100%
+}
+
+img {
+    border: 0
+}
+
+#first {
+    margin: 10px 10px 0 2px;
+    height: 20px;
+    float: left;
+    width: 1px;
+    border-right: 2px solid #e7642d
+}
+
+div.myMenu a:hover {
+    text-decoration: underline
+}
+
+div.area1 {
+    width: 1000px;
+    text-align: left;
+    margin: 0 auto
+}
+
+* html div.area1 {
+    position: relative
+}
+
+div.wrapper {
+    width: 100%;
+    clear: both;
+    height: .001em;
+    font-size: .001em;
+    overflow: hidden;
+    line-height: .001em
+}
+
+div.wrapper2 {
+    width: 100%;
+    clear: both;
+    height: 6px;
+    font-size: .001em;
+    overflow: hidden
+}
+
+#righttop div.wrapper2 {
+    height: 4px
+}
+
+.menuContainer {
+    background: #ed652d url(../../images/military/arrowmenu.gif) no-repeat top left
+}
+
+img {
+    vertical-align: top
+}
+
+a {
+    color: #e86131
+}
+
+a:hover {
+    text-decoration: none
+}
+
+#areatop {
+    background: #424242 url(../../images/military/bg.gif?v=2) repeat-x top;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    width: 100%;
+    color: #fff;
+    height: 36px;
+    padding-top: 20px;
+    border-bottom: 2px solid #d25d2d
+}
+
+#curpagearea {
+    width: 550px;
+    float: right;
+    text-align: right;
+    height: 85px;
+    padding: 0 30px 0 0
+}
+
+#curpagearea a {
+    color: #555;
+    text-decoration: none
+}
+
+#curpage {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    height: 85px;
+    padding-left: 90px
+}
+
+div.vert {
+    display: table;
+    height: 85px;
+    right: 0
+}
+
+div.vert div {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative
+}
+
+* + html div.vert {
+    top: 50%;
+    position: absolute;
+    height: auto
+}
+
+* + html div.vert div {
+    top: -50%;
+    position: relative
+}
+
+* + html #curpage {
+    position: relative
+}
+
+#curpage h1 {
+    font-size: 27px;
+    color: #4c4c4c
+}
+
+#sitetop a {
+    color: #e8e7e7;
+    text-decoration: none;
+    display: inline;
+    float: left;
+    padding: 0 10px 0 0
+}
+
+a.contacts, a.index {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400 !important;
+    background: url(../../images/military/bgcontacts.gif) repeat-x;
+    display: inline;
+    float: left;
+    padding: 0 8px 5px 15px !important
+}
+
+.more2 {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400 !important;
+    background: #c45323 url(../../images/military/bgcontacts.gif) repeat-x;
+    display: block;
+    text-decoration: none;
+    width: 190px;
+    padding: 2px 8px;
+    margin-bottom: 10px
+}
+
+.hl_npa {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    background: #c45323 url(../../images/military/npa_bg_heraldy.jpg) repeat;
+    display: block;
+    text-decoration: none;
+    width: 500px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+a.contacts img {
+    float: none !important;
+    margin-right: 7px !important;
+    display: inline
+}
+
+a.index {
+    padding: 0 8px 5px !important;
+    margin-right: 5px
+}
+
+#sitetop a:hover {
+    text-decoration: underline
+}
+
+a.contacts:hover {
+    text-decoration: none !important
+}
+
+#searchtop {
+    display: inline;
+    width: 500px;
+    float: right
+}
+
+div.searchfield {
+    display: inline;
+    width: 120px;
+    float: left;
+    height: 22px;
+    background: #fff
+}
+
+div.searchfield2 {
+    display: inline;
+    width: auto;
+    float: left;
+    height: 22px;
+    background: #fff
+}
+
+input.searchfield {
+    width: 72px;
+    background: #fff;
+    border: 0;
+    padding: 2px 10px;
+    color: #999;
+    display: inline;
+    font-size: 12px;
+    -webkit-appearance: none
+}
+
+div.searchfield2 input.searchfield {
+    width: 360px !important;
+    line-height: 18px;
+    height: 18px
+}
+
+input.searchbutton {
+    width: 17px;
+    height: 17px;
+    border: 0
+}
+
+.date {
+    color: #989898;
+    font-family: Georgia, Arial;
+    font-style: italic
+}
+
+.w50 .date {
+    padding-bottom: 5px;
+    display: block
+}
+
+div.dateright {
+    height: 56px;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+    color: #fff;
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 20px;
+    background: url(../../images/military/bgdate.gif);
+    line-height: 28px
+}
+
+div.dateright div {
+    display: block;
+    margin-top: 15px;
+    height: 30px
+}
+
+div.picinfo {
+    padding: 0 20px
+}
+
+div.armytype {
+    background: #fff;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    height: 94px;
+    position: relative;
+    margin-top: 10px;
+}
+
+div.armytype a {
+    width: 188px;
+    height: 13px;
+    border-right: 1px solid #d5d5d5;
+    padding: 60px 5px 0;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    font-size: 11px;
+    line-height: 16px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 10px 0 4px;
+    position: relative;
+}
+div.armytype a span {
+    width: 188px;
+    position: absolute;
+    top: 41%;
+    left: 4px;
+}
+
+hr {
+    height: 0;
+    float: left;
+    clear: both;
+    width: 95%;
+    color: #eeefe1
+}
+
+input, select {
+    vertical-align: middle;
+    font-size: 90%;
+    font-family: arial
+}
+
+select option.Selected {
+    background: #ccc
+}
+
+input[type="button"], input[type="submit"] {
+    color: #002c4b;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 20px
+}
+
+label {
+    padding-bottom: 3px
+}
+
+h1 {
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.625em;
+    line-height: 120%;
+    margin-top: .7em;
+    margin-bottom: .3em;
+    color: #333
+}
+
+#center h1 {
+    font-size: 1.3em
+}
+
+h2 {
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.525em;
+    line-height: 120%;
+    margin-top: .3em;
+    margin-bottom: .3em;
+    color: #333
+}
+
+h3, h4 {
+    font-weight: 400;
+    line-height: 120%;
+    display: block;
+    font-size: 1.425em
+}
+
+p {
+    clear: both
+}
+
+form {
+    padding: 0;
+    margin: 0
+}
+
+.star {
+    color: #d56638;
+    font-weight: 700
+}
+
+.createObjContainer .star {
+    margin-left: -9px;
+    position: absolute;
+    z-index: 10
+}
+
+#left {
+    width: 230px;
+    float: left;
+    overflow: hidden
+}
+
+#lefttop {
+    width: 210px;
+    float: left;
+    background: #757575;
+    padding: 10px;
+    height: 370px
+}
+
+#center, #centertop {
+    width: 550px;
+    float: left
+}
+
+* html #center {
+    overflow: hidden
+}
+
+#centertop {
+    background: #fff;
+    height: 390px
+}
+
+#right, #righttop {
+    width: 220px;
+    float: left
+}
+
+#righttop {
+    background: #3f3f3f;
+    height: 390px
+}
+
+#right {
+    overflow: hidden
+}
+
+div.righttopcontent {
+    width: 200px;
+    padding: 0 10px 6px;
+    background: url(../../images/military/arrowdate.gif) no-repeat center top
+}
+
+div.righttopcontent a, div.righttopcontent img {
+    display: block
+}
+
+.orange {
+    color: #e86131
+}
+
+a.orange {
+    color: #e2622d;
+    display: inline-block;
+    font-size: 13px;
+    padding: 18px 6px 0 5px;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+a.orange:hover {
+    text-decoration: none
+}
+
+button.orange, input.orange {
+    color: #fff;
+    background: #e86131 url(../../images/military/inputbg.gif) repeat-x;
+    font-size: 13px;
+    border: 0;
+    height: 23px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    margin: 10px 0
+}
+
+button.orange[disabled] {
+    color: #ccc;
+    cursor: default
+}
+
+a.plus {
+    color: #fff;
+    text-decoration: underline;
+    display: block;
+    font-size: 13px;
+    padding: 13px 10px 15px 25px;
+    background: url(../../images/military/plus.gif) no-repeat left;
+    margin-left: 5px;
+    cursor: pointer
+}
+
+a.plus:hover {
+    text-decoration: none
+}
+
+a.plusleader {
+    color: #fff;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 13px;
+    padding: 3px 3px 3px 25px;
+    background: url(../../images/military/plus.gif) no-repeat left;
+    margin: 5px 0 0 15px;
+    cursor: pointer
+}
+
+#lefttop a {
+    padding: 0 10px 0 60px;
+    border-bottom: 1px solid #858585;
+    width: 210px;
+    color: #fff;
+    font-size: 12px;
+    height: 58px;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative
+}
+
+* + html #lefttop a {
+    display: block;
+    width: 150px
+}
+
+#lefttop a.last {
+    padding: 0 10px 0 60px;
+    border-bottom: 0;
+    width: 156px;
+    color: #fff;
+    font-size: 12px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle
+}
+
+#lefttop a.last:hover, #lefttop a:hover {
+    text-decoration: none
+}
+
+#lefttop span {
+    display: block;
+    margin: 0 auto;
+}
+
+div.padd20leftico {
+    margin-left: 20px;
+    padding-left: 5px;
+    background: transparent url(../../images/military/blockbg.gif) repeat-y
+}
+
+@media screen and (min-resolution: 0dppx) {
+    div.padd20leftico {
+        background-color: #e3e3e3
+    }
+
+    div.bookm, div.bookm2, div.bottom {
+        background-color: #e3e3e3 !important
+    }
+
+    table.objattr {
+        border-collapse: separate
+    }
+
+    table.objattr .orgContacts td {
+        background: #757575 !important;
+        border: #757575 1px solid
+    }
+}
+
+#left div.padd20rightico {
+    margin: 0 20px 0 0;
+    padding-left: 5px;
+    background: transparent url(../../images/military/blockbgleft.gif) repeat-y top
+}
+
+@media screen and (min-resolution: 0dppx) {
+    #left div.padd20rightico {
+        background-color: #e3e3e3
+    }
+}
+
+div.padd20leftico a, #left div.padd20rightico a {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    font-family: Georgia, Arial;
+    padding: 0 16px 0 59px;
+    height: 86px;
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 190px
+}
+
+div.padd20leftico a span, #left div.padd20rightico a span {
+    display: block;
+    margin: 0 auto;
+}
+
+#left div.padd20rightico a {
+    width: 200px
+}
+
+* + html div.padd20leftico a {
+    display: block;
+    width: 120px
+}
+
+* + html #left div.padd20rightico a {
+    display: block;
+    width: 120px
+}
+
+div.promoarea {
+    background: #424242 url(../../images/military/bgcenterblock.gif);
+    padding: 20px;
+    width: 510px;
+    display: inline-block
+}
+
+div.promo {
+    height: 130px;
+    padding: 0 20px 0 250px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Georgia, Arial;
+    font-size: 190%;
+    line-height: 120%;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+* + html div.promo {
+    display: block
+}
+
+div.promo a {
+    color: #fff;
+    text-decoration: none;
+    display: block
+}
+
+div.comment {
+    border: 2px solid #999;
+    width: 510px;
+    padding: 0 20px 20px;
+    position: relative;
+    margin-bottom: 25px
+}
+
+div.arrow {
+    height: 22px;
+    width: 20px;
+    background: url(../../images/military/note.gif) no-repeat;
+    margin: -2px 0 -10px 30px
+}
+
+div.comment div.arrow {
+    position: absolute;
+    bottom: -22px;
+    left: 28px;
+    margin: 0
+}
+
+div.arrow_str {
+    background: url(../../images/military/notesmall.gif) no-repeat left center;
+    padding: 4px 5px 4px 20px
+}
+
+a.grayplus {
+    background: url(../../images/military/grayplus.gif) no-repeat;
+    padding: 0 20px 0 30px;
+    display: block;
+    text-decoration: underline;
+    margin: 10px 0;
+    cursor: pointer
+}
+
+a.grayplus#printbutton {
+    background: url(../../images/military/print1.gif) no-repeat
+}
+
+a.grayplus:hover {
+    text-decoration: none
+}
+
+div.w50 {
+    width: 265px;
+    float: left
+}
+
+.otherEvents .w50 {
+    float: none;
+    width: auto
+}
+
+div.w50 h2 {
+    font-size: 120%
+}
+
+div.shadow {
+    height: 2px;
+    clear: both;
+    background: url(../../images/military/shadow.gif) repeat-x;
+    line-height: .001em;
+    font-size: .001em
+}
+
+div.padd20right {
+    padding-right: 20px
+}
+
+div.padd20left {
+    padding-left: 20px
+}
+
+div.navleft {
+    background: #8a8a8a;
+    padding: 10px
+}
+
+div.navleft a {
+    background: url(../../images/military/whitearrow.gif) no-repeat left;
+    display: block;
+    color: #fff;
+    padding: 5px 0 5px 20px;
+    text-decoration: underline
+}
+
+div.navleft a:hover {
+    text-decoration: none
+}
+
+div.navleft a.current {
+    color: #000
+}
+
+div.navright {
+    background: #656565 url(../../images/military/bgnavright.gif) repeat-x top;
+    padding: 10px 10px 20px;
+    margin: 30px 0 0 20px
+}
+
+div.navright a {
+    display: block;
+    color: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid #828282;
+    text-decoration: underline
+}
+
+div.navright a:hover {
+    text-decoration: none
+}
+
+div.bottom {
+    background: url(../../images/military/bgbottommenu.gif) repeat-x;
+    height: 53px;
+    margin: 20px 0 15px;
+    width: 100%;
+    clear: both;
+    line-height: 51px;
+    text-align: center
+}
+
+div.bottom a {
+    color: #ccc;
+    display: inline-block;
+    padding: 0 7px;
+    font-size: 13px
+}
+
+div.copy {
+    margin: 15px 0;
+    text-align: center;
+    height: 40px
+}
+
+.menu {
+    display: none
+}
+
+div.path {
+    padding: 20px 0 9px;
+    color: #999
+}
+
+.path div.amountArea {
+    height: 35px;
+    width: 200px;
+    float: left
+}
+
+.path div.pagesArea {
+    width: 330px;
+    float: left
+}
+
+div.bookm, div.bookm2 {
+    height: 48px;
+    background: #424242 url(../../images/military/bgbookm.gif);
+    background-size: 1000px 50px
+}
+
+div.bookm2 {
+    position: absolute;
+    z-index: 10;
+    width: 550px
+}
+
+div.bookm a, div.bookm a.active, div.bookm2 a, div.bookm2 a.active {
+    height: 48px;
+    display: inline-block;
+    padding: 0 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    outline: 0 !important
+}
+
+div.bookm a, div.bookm2 a {
+    height: 40px
+}
+
+div.bookm3 a, div.bookm3 a.active {
+    padding: 0 10px
+}
+
+* + html div.bookm {
+    display: table-cell;
+    vertical-align: top
+}
+
+* + html div.bookm2 {
+    display: table-cell;
+    vertical-align: top
+}
+
+* + html div.bookm a {
+    vertical-align: top
+}
+
+* + html div.bookm2 a {
+    vertical-align: top
+}
+
+* html div.bookm {
+    display: table-cell;
+    vertical-align: top
+}
+
+* html div.bookm2 {
+    display: table-cell;
+    vertical-align: top
+}
+
+* html div.bookm a {
+    vertical-align: top
+}
+
+* html div.bookm2 a {
+    vertical-align: top
+}
+
+* + html div.pagesArea {
+    display: table-cell;
+    vertical-align: top
+}
+
+* + html div.pagesArea a {
+    vertical-align: top
+}
+
+* html div.pagesArea {
+    display: table-cell;
+    vertical-align: top
+}
+
+* html div.pagesArea a {
+    vertical-align: top
+}
+
+div.bookm a.active, div.bookm2 a.active {
+    background: #e7642d url(../../images/military/bgbookma.gif) top center repeat-y
+}
+
+div.bookm a span, div.bookm a.active span {
+    display: block;
+    margin-top: 10px;
+    border-bottom: 1px dashed #fff
+}
+
+div.bookm2 a span, div.bookm2 a.active span {
+    display: block;
+    margin-top: 12px
+}
+
+div.bookm a.active span, div.bookm2 a.active span {
+    border-bottom: 0
+}
+
+div.bookm2 a, div.bookm2 a.active {
+    width: 150px;
+    text-align: center
+}
+
+a.dotted {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+    margin: 0 5px;
+    font-weight: 700
+}
+
+span.gray {
+    display: inline-block;
+    color: #777;
+    margin: 0 5px
+}
+
+div.path a.pagenav, div.path a.pagenava {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    width: 28px;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+    background: #424242 url(../../images/military/gallery/t.gif) no-repeat;
+    cursor: pointer;
+    margin-left: 12px
+}
+
+div.path a.pagenava {
+    background: #e86131 url(../../images/military/gallery/ta2.gif) no-repeat
+}
+
+@media screen and (min-resolution: 0dppx) {
+    div.path a.pagenava {
+        background-color: #e3e3e3
+    }
+}
+
+div.path a.pagenav {
+    height: 20px
+}
+
+div.videonav, div.videonava {
+    display: inline-block;
+    text-decoration: none;
+    width: 28px;
+    height: 24px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    margin-right: 3px;
+    padding-top: 5px;
+    background: url(../../images/military/gallery/t.gif) no-repeat
+}
+
+div.videonava {
+    background: url(../../images/military/gallery/ta.gif) no-repeat
+}
+
+div.newsitem2 {
+    margin: 0 0 30px;
+    clear: both;
+    padding: 0 0 10px;
+    height: 120px
+}
+
+div.person {
+    margin: 0 0 20px;
+    clear: both;
+    padding: 0 0 10px
+}
+
+div.newsitem2 img, div.person img {
+    margin: 0 15px 20px 0;
+    width: 110px;
+    float: left
+}
+
+div.person .pictxt {
+    float: right;
+    width: 410px;
+    margin-bottom: 30px
+}
+
+div.person .onlytxt {
+    width: 410px;
+    margin-left: 125px
+}
+
+div.newsitem2 a, div.person a {
+    display: block;
+    font-weight: 700
+}
+
+div.newsitem2 .pmail a, div.person .pmail a {
+    font-weight: 400;
+    display: inline
+}
+
+.person a.contacts {
+    clear: both
+}
+
+div.newsitem {
+    margin-top: 30px;
+    clear: both;
+    padding: 0 0 10px 140px;
+    min-height: 120px
+}
+
+* html .newsitem {
+    height: 120px
+}
+
+div.eventitem {
+    clear: both;
+    margin-top: 10px;
+    padding: 0 0 10px 70px;
+    min-height: 50px
+}
+
+div.eventitem_noimg {
+    clear: both;
+    padding: 0 0 10px
+}
+
+pre {
+    font-family: Arial;
+    margin: 0
+}
+
+div.newsitem a, div.eventitem a, div.eventitem_noimg a, div.videoinfo a {
+    display: block;
+    margin-bottom: .5em;
+    font-weight: 700
+}
+
+.bigfoto {
+    border: 10px solid #e86131
+}
+
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    background: url(../../images/military/gallery/ugol.gif) no-repeat left bottom;
+    padding: 10px;
+    opacity: .99;
+    margin: -200px 0 0
+}
+
+#tooltip img {
+    border: 10px solid #e86131
+}
+
+div.newsgallery {
+    margin: 0 0 0 240px;
+    padding: 5px;
+    background: #fff;
+    width: 750px
+}
+
+div.gallerycenter {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 0 1px
+}
+
+.gallerycenter table {
+    width: 1000px;
+    border: 0;
+    margin-top: 20px
+}
+
+.gallerycenter td {
+    text-align: center;
+    vertical-align: middle;
+    width: 130px;
+    height: 130px;
+    padding: 0;
+    border: 0;
+    background: #efefef
+}
+
+.gallerycenter a {
+    display: block;
+    float: left;
+    width: 138px;
+    height: 93px;
+    margin: 0 4px 4px 0;
+    text-align: center
+}
+
+.gallerycenter a.withLikes {
+    height: auto;
+    width: auto;
+    float: none;
+    text-align: left;
+    margin: 0
+}
+
+.gallerycenter a.withLikes .gal_imgBlock {
+    background-color: #ccc;
+    display: block;
+    padding: 5px 0 35px;
+    text-align: center
+}
+
+.gallerycenter a.withLikes .gal_imgTitle {
+    display: block;
+    background: transparent url(../../images/military/grayarrow.gif) no-repeat 0 5px;
+    padding-left: 20px;
+    margin: 5px 0;
+    text-align: left
+}
+
+.gallerycenter .galItemBlock {
+    position: relative;
+    width: 250px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 15px 0
+}
+
+.gallerycenter .galItemBlock .imgLikes {
+    background: #ccc url(../../images/military/like_star_bw.png) no-repeat 5px 50%;
+    height: 22px;
+    display: block;
+    cursor: pointer;
+    padding: 4px 0 2px 35px;
+    position: absolute;
+    top: 168px
+}
+
+.big_img_Likes {
+    background: url(../../images/military/like_star_bw.png) no-repeat scroll right 50% transparent;
+    display: block;
+    float: right;
+    height: 20px;
+    padding: 2px 28px 0 0;
+    white-space: nowrap;
+    cursor: pointer
+}
+
+.big_img_Likes.disabled {
+    background-image: url(../../images/military/like_star_rb.png);
+    cursor: default
+}
+
+.gallerycenter .galItemBlock .imgLikes.disabled {
+    background-image: url(../../images/military/like_star_rb.png);
+    cursor: default
+}
+
+#right .gallery b {
+    display: block;
+    font-size: 90%;
+    margin: 2.5em 0 15px
+}
+
+#right .gallery ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#right .gallery li {
+    margin: 0;
+    padding: 0 0 15px;
+    display: block
+}
+
+div.plusico, div.plusicolast {
+    position: absolute;
+    margin: -17px 0 0 41px;
+    background: url(../../images/military/smallplus.gif) no-repeat;
+    width: 9px;
+    height: 9px
+}
+
+div.plusicolast {
+    margin-top: -9px
+}
+
+div.linkslist {
+    padding: 5px 20px 10px
+}
+
+div.linkslist a {
+    background: url(../../images/military/smallplusgray.gif) no-repeat left;
+    display: block;
+    padding-left: 15px
+}
+
+p {
+    text-align: justify
+}
+
+div.vote {
+    padding: 10px 0;
+    background: #de6736;
+    color: #000;
+    width: 210px
+}
+
+div.vote span {
+    padding: 0 10px 0 15px;
+    display: block
+}
+
+input.ok {
+    color: #fff;
+    text-align: right;
+    border: 0;
+    background: transparent;
+    padding-right: 10px;
+    width: 200px
+}
+
+div.answer {
+    margin: 4px 0 7px;
+    padding: 7px 0;
+    background: #6c6c6c;
+    color: #fff
+}
+
+div.answer label {
+    color: #fff;
+    font-size: 13px;
+    display: block
+}
+
+table td {
+    vertical-align: top
+}
+
+.black {
+    color: #000
+}
+
+div.leaderpic {
+    display: inline-block;
+    width: 256px;
+    height: 195px;
+    text-align: right;
+    float: left
+}
+
+div.leaderinfo {
+    float: left;
+    display: inline-block;
+    width: 294px;
+    height: 195px;
+    background: #4b4b4b url(../../images/military/bgname.gif) repeat-x top;
+    color: #fff
+}
+
+div.position {
+    color: #000;
+    padding: 0 0 0 15px;
+    font-size: 13px
+}
+
+div.leaderinfo h1 {
+    color: #fff;
+    margin: 0 10px 0 15px !important;
+    font-size: 22px
+}
+
+div.leaderinfo h2 {
+    color: #fff;
+    margin: 0 10px 0 15px !important;
+    font-size: 19px
+}
+
+div.descr {
+    background: #4b4b4b url(../../images/military/bginfo.gif) repeat-x top;
+    color: #fff;
+    padding: 8px 15px;
+    height: 112px;
+    line-height: 14px;
+    font-size: 12px
+}
+
+div.descr span {
+    font-style: italic;
+    font-size: 11px;
+    display: block;
+    padding: 8px 0 4px
+}
+
+div.contacts {
+    background: #4b4b4b url(../../images/military/bginfo.gif) repeat-x top;
+    color: #000;
+    padding: 5px 25px 20px 45px;
+    line-height: 14px;
+    font-size: 12px;
+    margin: 20px 0
+}
+
+div.contacts h1 {
+    color: #fff;
+    margin-left: -20px
+}
+
+div.contacts td {
+    color: #fff;
+    padding: 2px 0
+}
+
+div.contacts tr td:first-child {
+    font-weight: 700;
+    color: #c7c7c7;
+    padding-right: 15px
+}
+
+div.menuDiv {
+    top: 216px !important
+}
+
+.mark {
+    color: #900;
+    font-weight: 700
+}
+
+.line {
+    background-color: #AABDD5
+}
+
+div.createObjContainer input {
+    width: 500px;
+    border: 1px inset;
+    color: #4a4a4a
+}
+
+div.createObjContainer select {
+    width: 505px
+}
+
+div.createObjContainer table.buttonPane {
+    margin-left: 9px
+}
+
+div.createObjContainer textarea {
+    width: 500px;
+    border: 1px inset;
+    display: block;
+    margin-bottom: 9px
+}
+
+div.createObjContainer fieldset input, .captcha1 input {
+    width: 490px;
+    display: block;
+    margin-bottom: 9px
+}
+
+div.createObjContainer fieldset select {
+    width: 495px;
+    display: block;
+    margin-bottom: 9px
+}
+
+div.createObjContainer fieldset {
+    margin: 10px 0
+}
+
+.searchform input, .searchform textarea {
+    width: 538px;
+    border: 1px inset;
+    color: #4a4a4a
+}
+
+.searchform select {
+    width: 540px;
+    border: 1px inset;
+    color: #4a4a4a
+}
+
+div.title {
+    font-weight: 700;
+    padding: 10px 0 0 10px
+}
+
+div.titledate {
+    font-weight: 700;
+    padding: 5px 10px 0 0;
+    float: left;
+    display: inline
+}
+
+div.videoinfo {
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+    width: 255px
+}
+
+div.datearea {
+    background: #fff;
+    border: 1px inset;
+    width: 175px
+}
+
+.datearea input[type=text] {
+    -webkit-appearance: none
+}
+
+div.leaders {
+    background: #8a8a8a;
+    padding: 0 5px 5px 0;
+    color: #000;
+    margin-right: 20px;
+    font-size: 11px;
+    clear: both;
+    display: block;
+    min-height: 90px;
+    overflow: hidden;
+}
+
+div.leaders div {
+    padding-left: 75px
+}
+
+div.leaders a {
+    color: #fff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 7px 0 0 5px;
+    font-size: 12px;
+    float: left;
+    width: 120px
+}
+
+div.leaders img {
+    float: left
+}
+
+div.datearea input {
+    border: 0
+}
+
+div.datearea input.data {
+    width: 20px
+}
+
+button.arrow {
+    border: 0;
+    width: 17px;
+    cursor: pointer;
+    padding: 0;
+    float: left
+}
+
+div.docs {
+    margin-left: 20px;
+    padding: 5px 5px 5px 20px;
+    background: url(../../images/military/smallplusgray.gif) no-repeat left 10px
+}
+
+div.docs2 {
+    background: url(../../images/military/smallplusgray.gif) no-repeat left 5px;
+    padding: 0 5px 10px 20px;
+    margin: 0
+}
+
+div.plusdivstr, div.plusdivstr2 {
+    float: left;
+    width: 520px;
+    padding: 5px 5px 5px 0
+}
+
+.note div.plusdivstr, .note div.plusdivstr2 {
+    float: none;
+    width: auto;
+    margin-left: 20px
+}
+
+div.plusdivstr2 {
+    width: 485px
+}
+
+div.plusdivstrminus {
+    float: left;
+    width: 500px;
+    padding: 5px 5px 5px 20px;
+    background: url(../../images/military/sm.gif) no-repeat left
+}
+
+div.plusicostr, div.minusicostr {
+    float: left;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    background: url(../../images/military/sp.gif) no-repeat left
+}
+
+div.plusdivstr div.plusicostr, div.plusdivstr div.minusicostr {
+    width: auto;
+    height: auto;
+    padding-left: 25px;
+    background-position: 3px center
+}
+
+div.minusicostr {
+    background: url(../../images/military/sm.gif) no-repeat left
+}
+
+div.subdocs {
+    margin-left: 20px;
+    padding: 5px 5px 5px 20px;
+    background: url(../../images/military/notesmall.gif) no-repeat left 10px
+}
+
+div.subdocs a {
+    color: #777
+}
+
+div.more {
+    margin: 7px 0;
+    padding: 5px 5px 5px 25px;
+    background: url(../../images/military/grayplus.gif) no-repeat left 5px
+}
+
+div.more a {
+    font-weight: 400
+}
+
+#CalendarLayer {
+    margin: 0 0 0 180px
+}
+
+table.objattr {
+    width: 100%
+}
+
+table.objattr td {
+    padding: 7px 7px 7px 0
+}
+
+div.multiscript {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 290px;
+    display: inline-block;
+    border-right: 1px solid #999
+}
+
+div.multiscriptrow {
+    padding: 5px;
+    text-decoration: underline
+}
+
+div.multiscriptrow.selectedMultiscriptRow {
+    background: #4b4b4b;
+    padding: 5px
+}
+
+a.multiscriptrow {
+    color: #555;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+a.multiscriptrow:hover {
+    color: #e86131
+}
+
+a.multiscriptrow.selectedMultiscriptRow {
+    color: #f0f8ff
+}
+
+div.flashvideo {
+    display: inline-block
+}
+
+.flashmap .flashvideo#video0, #center h1 + .flashvideo#video0, * html #center #video0 {
+    display: block;
+    width: 549px;
+    height: 363px;
+    overflow: hidden;
+    text-align: right
+}
+
+.flashmap .flashvideo#video0 object {
+    margin-left: -1px
+}
+
+a.alphSearch {
+    cursor: pointer
+}
+
+a.alphSearch:hover {
+    text-decoration: underline
+}
+
+a.big {
+    font-weight: 700;
+    color: #333;
+    font-family: georgia;
+    font-size: 100%;
+    text-decoration: none;
+    display: block
+}
+
+a.big:hover {
+    text-decoration: underline
+}
+
+div.note {
+    padding-left: 40px;
+    clear: both
+}
+
+button.refreshCaptcha {
+    border: 0;
+    font-size: 11px !important;
+    height: 44px;
+    padding-top: 28px;
+    background: url(../../admin/icons/big/i219.gif) no-repeat top center;
+    cursor: pointer
+}
+
+.captcha div {
+    float: left
+}
+
+.captcha div:first-child {
+    padding-right: 20px
+}
+
+.captcha img {
+    cursor: pointer;
+    vertical-align: middle
+}
+
+div.orange {
+    color: #e86131;
+    text-decoration: underline;
+    font-weight: 700;
+    padding-top: 20px
+}
+
+.clear {
+    clear: both;
+    height: .001em;
+    overflow: hidden;
+    font-size: .001em;
+    float: none !important
+}
+
+.orgContacts {
+    background-color: #757575;
+    color: #000
+}
+
+.orgContacts h1 {
+    color: #fff;
+    font-weight: 400
+}
+
+.orgContacts td, .orgContacts th {
+    padding: 0 7px 7px 20px !important;
+    color: #fff
+}
+
+tr.orgContacts td:first-child {
+    font-weight: 700;
+    color: #c7c7c7
+}
+
+tr.orgContacts a {
+    color: #000
+}
+
+div.structure {
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
+    background: #c1c1c1;
+    border: 1px solid #9c9c9c;
+    padding: 10px;
+    margin-top: 30px;
+    position: relative
+}
+
+div.structure a, div.structure a.active {
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.425em;
+    line-height: 120%;
+    color: #fff;
+    display: inline-block;
+    padding: 11px;
+    text-align: left;
+    text-decoration: none;
+    margin: -30px 0 30px;
+    width: 180px;
+    float: left;
+    background: #6c6c6c url(../../images/military/bgstr_gray.gif)
+}
+
+div.structure a.last, div.structure a.lastactive {
+    text-align: right;
+    z-index: 10;
+    top: 0;
+    margin-top: -20px;
+    right: 36px;
+    position: absolute
+}
+
+div.structure a.active, div.structure a.first {
+    position: absolute;
+    left: 10px;
+    background: #dd6a26 url(../../images/military/bgstr_orange.gif)
+}
+
+div.structure a.first {
+    background: #6c6c6c url(../../images/military/bgstr_gray.gif)
+}
+
+div.structure a.lastactive {
+    background: #dd6a26 url(../../images/military/bgstr_orange.gif)
+}
+
+div.structure div.strbox {
+    height: 83px;
+    margin: 30px 0;
+    background: url(../../images/military/bgstr_center.gif) repeat-x
+}
+
+div.structure div.strbox a {
+    display: block;
+    clear: both;
+    width: 100%
+}
+
+div.structure div.orangeleft {
+    height: 83px;
+    background: url(../../images/military/orange_left.gif) left no-repeat
+}
+
+div.structure div.orangeright {
+    height: 83px;
+    background: url(../../images/military/orange_right.gif) right no-repeat
+}
+
+div.structure a.str2 {
+    margin: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    line-height: 16px
+}
+
+div.strobj {
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
+    background: #ccc;
+    border: 1px solid #9c9c9c;
+    padding: 10px;
+    margin-top: 30px;
+    position: relative
+}
+
+div.strobj div.strhead, div.strobj div.strhead_orange {
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.525em;
+    line-height: 120%;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    margin: -30px auto 30px;
+    width: 370px;
+    background: #666 url(../../images/military/bgstr_gray.gif) repeat-x top
+}
+
+div.strobj div.strhead_orange {
+    font-size: .9em;
+    padding: 10px 0;
+    background: #dd6a26 url(../../images/military/bgorange.gif);
+    position: relative
+}
+
+div.strobj div.headttl, div.strobj div.headttl_light {
+    width: 340px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #9c9c9c;
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.625em;
+    line-height: 120%;
+    color: #333
+}
+
+div.strobj div.headttl_light {
+    color: #555;
+    font-size: 1.425em;
+    padding: 10px
+}
+
+div.grayarrow {
+    background: url(../../images/military/arrowdown.gif) no-repeat bottom;
+    height: 16px
+}
+
+div.list {
+    padding: 10px 40px;
+    min-height: 260px
+}
+
+div.listorange {
+    padding: 10px 40px;
+    min-height: 300px
+}
+
+div.list div, div.listorange div {
+    padding-left: 20px;
+    background: url(../../images/military/grayarrow.gif) no-repeat left;
+    text-decoration: underline;
+    font-weight: 700;
+    text-align: left;
+    margin: 20px 0
+}
+
+.li1 {
+    padding: 0 0 10px 20px;
+    background: url(../../images/military/grayarrow.gif) 0 2px no-repeat
+}
+
+div.langblock a {
+    color: #fff;
+    display: block;
+    padding-left: 12px;
+    text-decoration: none
+}
+
+a.mainlang:hover {
+    text-decoration: none !important
+}
+
+a.lang {
+    color: #fff;
+    display: block;
+    padding-left: 24px !important
+}
+
+#langmenu {
+    padding: 5px;
+    z-index: 200;
+    position: absolute;
+    top: 42px;
+    margin-left: -14px;
+    width: 81px
+}
+
+* + html #langmenu {
+    margin-left: -91px
+}
+
+* html #langmenu {
+    margin-left: -91px
+}
+
+#langmenu a:hover {
+    text-decoration: underline
+}
+
+div.verblock a {
+    color: #fff;
+    display: block;
+    padding-left: 12px !important
+}
+
+a.mainver:hover {
+    text-decoration: none !important
+}
+
+a.ver {
+    color: #fff;
+    display: block !important;
+    padding: 3px 0 !important;
+    width: 100%
+}
+
+#vermenu {
+    z-index: 200;
+    position: absolute;
+    padding-top: 5px;
+    top: 42px;
+    margin-left: -25px;
+    width: 145px
+}
+
+* + html #vermenu {
+    margin-left: -145px
+}
+
+* html #vermenu {
+    margin-left: -145px
+}
+
+#vermenu a:hover {
+    text-decoration: underline
+}
+
+.loading, .aloading {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 90%;
+    white-space: nowrap
+}
+
+.orgPositions {
+    margin-top: 15px
+}
+
+.vop h2 {
+    font-size: 100%
+}
+
+.avtor em {
+    font-size: 95%
+}
+
+.game {
+    position: absolute;
+    text-align: center;
+    z-index: 5100
+}
+
+.closeGame {
+    font-weight: 700;
+    cursor: pointer;
+    padding-top: 10px
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    background-color: #000;
+    -moz-opacity: .5;
+    opacity: .5;
+    -ms-filter: alpha(opacity=50)
+}
+
+#overlay[id] {
+    position: fixed
+}
+
+.radio, .checkbox {
+    width: 20px
+}
+
+#objListTable th {
+    background: #8a8a8a;
+    color: #e3e3e3;
+    border-left: 1px solid #e3e3e3
+}
+
+#objListTable tr.out1 td {
+    background: #e3e3e3
+}
+
+#objListTable tr.out2 td {
+    background: #f2f2f2
+}
+
+#objListTable tr.over td {
+    background: #fff
+}
+
+a.sortheads {
+    color: #e3e3e3;
+    text-decoration: none
+}
+
+fieldset input, fieldset textarea {
+    width: 470px !important
+}
+
+fieldset select {
+    width: 475px !important
+}
+
+input.checkbox {
+    width: 20px !important
+}
+
+input.pagenav {
+    width: 40px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1px;
+    background-color: #fff
+}
+
+div.newspaper, div.newspaperdate {
+    background: #8a8a8a;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    margin: 14px 0;
+    width: 360px;
+    float: left
+}
+
+div.newspaperdate {
+    text-decoration: none;
+    font-weight: 400;
+    text-align: left;
+    width: 130px;
+    float: left
+}
+
+div.logopaper {
+    float: left;
+    width: 125px;
+    height: 50px
+}
+
+div.newspaperitem {
+    clear: both
+}
+
+div.newspaperitem a {
+    margin: 15px 0 6px;
+    display: block
+}
+
+h1.news {
+    text-transform: uppercase;
+    color: #fff;
+    background: #8a8a8a;
+    text-align: center;
+    padding: 5px;
+    width: 300px;
+    margin: 10px auto
+}
+
+div.bottombanner {
+    margin: 40px 0 10px;
+    text-align: center
+}
+
+div.bottombanner a {
+    width: 88px;
+    height: 31px;
+    margin: 0 11px
+}
+
+div.emblem {
+    width: 260px;
+    height: 135px
+}
+
+img.photo {
+    margin: 0 10px 5px 0;
+    float: left
+}
+
+div.rating {
+    font-size: 12px;
+    padding: 5px;
+    background: #ccc;
+    margin: 10px 0
+}
+
+div.rating input {
+    width: auto;
+    margin: -3px 2px 0 0
+}
+
+form .note {
+    font-size: 90%;
+    color: #999;
+    display: block
+}
+
+.createObjContainer .note {
+    margin: -5px 0 7px
+}
+
+.notice {
+    color: #FFF;
+    position: absolute;
+    margin: 20px 0 0 357px
+}
+
+.notice .submit {
+    padding: 0 5px;
+    line-height: 21px;
+    font-size: 12px;
+    background: #ca0000;
+    color: #FFF;
+    text-decoration: none;
+    display: block
+}
+
+.ftr_block {
+    display: inline;
+    margin-right: 50px
+}
+
+.ftr_block a {
+    color: #000
+}
+
+#footer {
+    text-align: center;
+    line-height: 130%;
+    padding: 0 0 49px;
+    clear: both;
+    width: 1000px;
+    height: 185px;
+    position: absolute;
+    bottom: 0
+}
+
+#footer .copy {
+    display: inline;
+    margin: 0;
+    height: auto;
+    padding-top: 15px
+}
+
+#center .w50 a img {
+    background: #CCC;
+    display: block
+}
+
+#langmenu, #vermenu {
+    display: none
+}
+
+div.FaceBook {
+    background-image: url(../../images/sn/fb.png);
+    width: 16px;
+    height: 16px
+}
+
+div.LiveJournal {
+    background-image: url(../../images/sn/lj.png);
+    width: 16px;
+    height: 16px
+}
+
+div.VKontakte {
+    background-image: url(../../images/sn/vk.png);
+    width: 16px;
+    height: 16px
+}
+
+div.Twitter {
+    background-image: url(../../images/sn/tw.png);
+    width: 16px;
+    height: 16px
+}
+
+div.addThisShare {
+    background-image: url(../../images/sn/share.png);
+    width: 16px;
+    height: 16px
+}
+
+div.sn_like_btn {
+    padding: 3px;
+    vertical-align: middle;
+    height: 25px;
+    display: table-cell
+}
+
+div.sn_btn {
+    padding: 5px 3px 3px;
+    float: left
+}
+
+div.sn_add_this_btn {
+    float: left;
+    padding: 5px 3px 3px
+}
+
+div.facebook_like {
+    width: 130px
+}
+
+div.vkontakte_like {
+    width: 90px !important
+}
+
+div.sn_like_btn iframe {
+    width: 134px !important
+}
+
+.prev {
+    float: left;
+    font: bold 120% Georgia;
+    color: #e2623d;
+    text-decoration: none
+}
+
+.next {
+    float: right;
+    font: bold 120% Georgia;
+    color: #e2623d;
+    text-decoration: none
+}
+
+.rating-photo {
+    width: 50px;
+    height: 50px;
+    padding-right: 15px !important
+}
+
+.rating-radio {
+    margin-top: 20px !important;
+    margin-right: 15px !important
+}
+
+.rating-row {
+    padding-bottom: 10px;
+    height: 50px
+}
+
+.rating-row > div {
+    float: left
+}
+
+.rating-title {
+    width: 100%;
+    margin-top: 0 !important
+}
+
+.rating-row > div.rating-rate {
+    float: right
+}
+
+.rating-rate h3 {
+    font-size: 50px !important;
+    color: #600900;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 50px;
+    width: 80px
+}
+
+.rating-cell {
+    float: left
+}
+
+.elect {
+    width: 190px;
+    padding: 20px 0 115px 20px;
+    color: #333;
+    font: 24px "Times New Roman";
+    background: url(../../images/military/bg/elect_bg.gif) bottom left no-repeat;
+    margin-bottom: 20px
+}
+
+.elect b {
+    display: block;
+    font-size: 120px;
+    line-height: 1;
+    padding-left: 15px
+}
+
+.article_pct {
+    text-decoration: none
+}
+
+.article_pct img {
+    width: 150px;
+    height: auto
+}
+
+.sh {
+    background: #000;
+    opacity: .8;
+    filter: Alpha(opacity=80);
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 0;
+    bottom: 0;
+    width: 100%
+}
+
+.fixed {
+    position: fixed
+}
+
+* html .fixed {
+    position: absolute
+}
+
+INPUT.disabled {
+    background-color: #F3F3F3;
+    border-color: #999
+}
+
+.noborder {
+    border: 0
+}
+
+button.lnk {
+    background: transparent;
+    width: 22px;
+    height: 18px;
+    margin: 0 2px 0 0;
+    border: 0
+}
+
+.bottomMarg {
+    padding-bottom: 14px
+}
+
+.soc {
+    font-size: 0;
+    margin: 3px 0 0 10px;
+    display: inline-block;
+    vertical-align: top
+}
+
+#sitetop .soc a {
+    padding: 0;
+    float: none
+}
+
+.soc img {
+    border: 0;
+    margin: 0 2px 0 1px;
+    width: 15px
+}
+
+.toptitle {
+    height: 33px;
+    text-align: center;
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.625em;
+    line-height: 33px;
+    color: #231f20;
+    background: #e76631
+}
+
+.topblock {
+    position: relative;
+    overflow: hidden
+}
+
+.topblock-left {
+    width: 208px;
+    float: left;
+    background: #757575;
+    height: 390px
+}
+
+#centertop.topblock-center {
+    height: 390px;
+    width: 584px;
+    float: left;
+    background: #fff
+}
+
+#righttop.topblock-right {
+    height: 390px;
+    width: 208px;
+    float: left;
+    background: #3f3f3f
+}
+
+#centertop.topblock-center .ad-gallery .ad-image-wrapper, #centertop.topblock-center .ad-gallery {
+    width: 584px
+}
+
+#centertop.topblock-center #descriptions .ad-image-description {
+    width: 524px
+}
+
+#centertop.topblock-center div.bgdesc {
+    width: 544px
+}
+
+.toppromo {
+    position: relative;
+    padding: 0 4px
+}
+
+.toppromo a {
+    display: block
+}
+
+.toppromo img {
+    margin: 4px 0;
+    display: block
+}
+
+.photolist {
+    position: relative
+}
+
+.photolist-item {
+    position: relative;
+    height: 179px;
+    overflow: hidden;
+    display: block
+}
+
+.photolist-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 6px 10px 8px;
+    background: #666;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none
+}
+
+.photolist-image {
+    width: 208px;
+    height: 180px;
+}
+
+#left .contentblock-left {
+    position: relative;
+    width: 225px
+}
+
+#right .contentblock-right {
+    position: relative;
+    width: 220px
+}
+
+.contentblock-left .borderblock {
+    margin-right: 17px
+}
+
+#right .contentblock-right .borderblock {
+    margin-left: 17px
+}
+
+.borderblock {
+    position: relative
+}
+
+.borderblock-title {
+    margin-left: 4px;
+    margin-bottom: -10px;
+    font-family: Georgia, Arial;
+    font-weight: 700;
+    font-size: 1.625em;
+    line-height: 120%;
+    color: #231f20
+}
+
+.borderblock-title span {
+    padding: 0 5px;
+    background: #e3e3e3
+}
+
+.borderblock-holder {
+    padding: 4px;
+    border: 1px solid #fff
+}
+
+.borderblock-title + .borderblock-holder {
+    padding-top: 15px
+}
+
+.borderblock-holder + .borderblock-holder {
+    border-top: 0
+}
+
+.borderblock-holder .vote {
+    width: 100%;
+    color: #fff
+}
+
+.sidelist {
+    position: relative
+}
+
+.borderblock .sidelist {
+    margin: 5px
+}
+
+.sidelist-item + .sidelist-item {
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid #c0c0c1
+}
+
+.sidelist-link {
+    color: inherit;
+    text-decoration: none;
+    display: block
+}
+
+.sidelist-image {
+    border: 1px solid #fff;
+    margin-bottom: 4px;
+    display: block;
+    width: 181px
+}
+
+.sidelist-date {
+    color: #818285
+}
+
+.sidelist-title {
+    display: block
+}
+
+.lightmenu {
+    position: relative;
+    margin: 0;
+    padding: 0
+}
+
+.lightmenu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #e76631;
+    color: #fff
+}
+
+.lightmenu li + li {
+    margin-top: 1px
+}
+
+.lightmenu a {
+    padding: 5px 14px;
+    color: inherit;
+    text-decoration: none;
+    display: block
+}
+
+.sidemenu ul, .sidemenu {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.2
+}
+
+.sidemenu ul {
+    border-bottom: 1px solid #c5c5c5;
+    display: none
+}
+
+.sidemenu li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #6c6c6c;
+    color: #fff
+}
+
+.sidemenu ul li {
+    background: #bcbdc0
+}
+
+.sidemenu ul li:first-child, .sidemenu li + li {
+    border-top: 1px solid #c5c5c5
+}
+
+.sidemenu a {
+    position: relative;
+    min-height: 31px;
+    padding: 0 0 0 38px;
+    color: inherit;
+    text-decoration: none;
+    display: block
+}
+
+.sidemenu a.active {
+    background: #e76631
+}
+
+.sidemenu a:before {
+    content: "";
+    width: 0;
+    height: 31px;
+    margin-left: -1px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.sidemenu a > span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.sidemenu a > span:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-left: -13px;
+    margin-right: 5px;
+    background: #e76631;
+    display: inline-block;
+    vertical-align: baseline
+}
+
+.sidemenu a > img + span:before {
+    display: none
+}
+
+.sidemenu img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 1px solid #c5c5c5;
+    border-right: 2px solid #e76631
+}
+
+.m_st {
+    margin-top: 4px
+}
+
+.m_mt {
+    margin-top: 10px
+}
+
+.m_lt {
+    margin-top: 15px
+}
+
+.m_sb {
+    margin-bottom: 4px
+}
+
+.m_mb {
+    margin-bottom: 10px
+}
+
+.m_lb {
+    margin-bottom: 15px
+}
+
+.mbmenu {
+    display: none
+}
+
+.rootVoices {
+    height: 37px;
+    width: 99%
+}
+
+.rootVoices td.rootVoice, .rootVoices th.rootVoice {
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 8px;
+    cursor: pointer
+}
+
+a.rootVoice:hover {
+    text-decoration: none !important;
+    color: #e86131
+}
+
+.rootVoices a.rootVoice span, .rootVoices a.rootVoice span {
+    padding-left: 20px
+}
+
+.rootVoices a.rootVoice.selected, .rootVoices a.rootVoice.selected {
+    background: #3d87b0;
+    -moz-box-shadow: #999 2px 2px 10px;
+    -webkit-box-shadow: #999 2px 2px 10px
+}
+
+.rootVoices a.rootVoice.selected span, .rootVoices a.rootVoice.selected span {
+    padding-left: 20px
+}
+
+.rootVoices td.rootVoice.disabled.selected {
+    -moz-box-shadow: #ddd 2px 2px 10px;
+    -webkit-box-shadow: #ddd 2px 2px 10px;
+    background: #f9f9f9 !important;
+    color: #1a6994
+}
+
+.menuShadow {
+    padding: 2px;
+    padding-bottom: 0;
+    left: -2px;
+    top: 1px
+}
+
+.menuContainer {
+    position: absolute;
+    padding: 10px;
+    width: auto !important
+}
+
+.menuContainer.submenuContainer {
+    border-top: none !important
+}
+
+.menuContainer.disabled {
+    -moz-box-shadow: #ddd 2px 5px 10px;
+    -webkit-box-shadow: #ddd 2px 5px 10px;
+    border-top: 5px solid #f9f9f9;
+    background-color: #ebebeb
+}
+
+.menuContainer .line {
+    background-color: transparent;
+    width: 100%
+}
+
+.menuContainer .line.title {
+    background-color: #B23305;
+    font-size: 14px
+}
+
+.menuContainer.disabled .line.title {
+    background-color: #f9f9f9
+}
+
+.menuContainer .line.title a {
+    font-size: 14px;
+    color: #FFF
+}
+
+.menuContainer.disabled .line.title a {
+    font-size: 14px;
+    color: #1a6994
+}
+
+.menuContainer td a {
+    text-decoration: underline;
+    color: #fff
+}
+
+.menuContainer td.voice {
+    font-size: 12px;
+    padding: 4px 0
+}
+
+.menuContainer .separator {
+    background-color: #999;
+    height: 1px;
+    padding: 0;
+    margin: 0
+}
+
+.menuContainer td.img {
+    text-align: center;
+    font-size: 12px;
+    color: #c3c3c3;
+    background-color: transparent;
+    width: 24px;
+    padding: 5px
+}
+
+.menuContainer td.img img {
+    width: 20px
+}
+
+.menuContainer .textBox {
+    padding: 10px;
+    font-size: 12px;
+    color: #999
+}
+
+.menuContainer .selected td {
+    text-decoration: none;
+    color: #333
+}
+
+.menuContainer .selected td a {
+    text-decoration: none;
+    color: #333;
+    display: block
+}
+
+.menuContainer .disabled td, .menuContainer .disabled td a {
+    color: #bbb
+}
+
+.menuContainer .subMenuOpener {
+    background-repeat: no-repeat;
+    background-position: right
+}
+
+.menuContainer .selected .subMenuOpener {
+    background-repeat: no-repeat;
+    background-position: right
+}
